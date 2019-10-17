@@ -19,6 +19,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import {ClientService} from './services/client.service';
 import {FormsModule} from '@angular/forms';
+import {FlashMessagesModule} from 'angular2-flash-messages';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {FormsModule} from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [ClientService],
   bootstrap: [AppComponent]
