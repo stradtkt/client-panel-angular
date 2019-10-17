@@ -17,7 +17,7 @@ export class AddClientComponent implements OnInit {
     phone: '',
     balance: 0
   };
-  disableBalanceOnAdd = true;
+  disableBalanceOnAdd: boolean = true;
   @ViewChild('clientForm') form: any;
 
   constructor(private flashMessage: FlashMessagesService,
